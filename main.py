@@ -14,11 +14,14 @@ def run_text_window(pipe, title):
 
     root = tk.Tk()
     root.title(title)
+    root.configure(background='black')
 
     text = tk.Text(root, height=10, width=40)
     text.pack(padx=10, pady=5)
+    text.configure(background='beige')
 
-    button = tk.Button(root, text="Send Text", command=copy_text)
+    button = tk.Button(root, text="Dërgo", command=copy_text)
+    button.configure(background='beige')
     button.pack(pady=5)
 
     receive_text()
@@ -28,8 +31,8 @@ def main():
     parent_conn1, child_conn1 = Pipe()
     parent_conn2, child_conn2 = Pipe()
 
-    p1 = Process(target=run_text_window, args=(child_conn1, "Window 1"))
-    p2 = Process(target=run_text_window, args=(child_conn2, "Window 2"))
+    p1 = Process(target=run_text_window, args=(child_conn1, "Faqja 1"))
+    p2 = Process(target=run_text_window, args=(child_conn2, "Faqja 2"))
 
     p1.start()
     p2.start()
