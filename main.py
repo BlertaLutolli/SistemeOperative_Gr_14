@@ -14,14 +14,14 @@ def run_text_window(pipe, title):
 
     root = tk.Tk()
     root.title(title)
-    root.configure(background='black')
+    root.configure(background='#989ea6')
 
     text = tk.Text(root, height=10, width=40)
     text.pack(padx=10, pady=5)
-    text.configure(background='beige')
+    text.configure(background='#d4d6d9')
 
     button = tk.Button(root, text="Dërgo", command=copy_text)
-    button.configure(background='beige')
+    button.configure(background='#d4d6d9')
     button.pack(pady=5)
 
     receive_text()
