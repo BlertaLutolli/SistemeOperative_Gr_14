@@ -14,7 +14,7 @@ def run_text_window(pipe, title):
 
     root = tk.Tk()
     root.title(title)
-    root.configure(background='#989ea6')
+    root.configure(background='#89CFF0')
 
     text = tk.Text(root, height=10, width=40)
     text.pack(padx=10, pady=5)
